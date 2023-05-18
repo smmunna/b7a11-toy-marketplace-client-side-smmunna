@@ -9,6 +9,7 @@ import MyToy from '../components/MyToy/MyToy';
 import Blogs from '../components/Blogs/Blogs';
 import Register from '../components/Register/Register';
 import Login from '../components/Login/Login';
+import ToyDetails from '../components/ToyDetails/ToyDetails';
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
                 path: "/alltoys",
                 element: <AllToy />,
                 loader:()=>fetch('https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys')
+            },
+            {
+                path: "/toydetails/:id",
+                element: <ToyDetails />,
+                loader:({params})=>fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/${params.id}`)
             },
             {
                 path: "/addtoys",
