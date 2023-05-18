@@ -1,7 +1,14 @@
 .toy-search {
     border: 1px solid black;
+    box-shadow: 2px 5px 4px rgba(61, 92, 118, 0.441);
 }
 
 .toy-search:focus {
     border: 1px solid black;
+}
+.mysearchbtn{
+    background-color: aqua;
+    padding: 9px 12px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 4px rgba(61, 92, 118, 0.441);
 }
