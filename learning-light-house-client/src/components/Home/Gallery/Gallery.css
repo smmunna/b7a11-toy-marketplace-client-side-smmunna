@@ -1,0 +1,25 @@
+.Gallery{
+    background-image: url('../../../assets/images/11.png');
+    background-size: cover;
+    background-position: center;
+}
+.my-imageg{
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+.my-imageg img{
+    height: 200px;
+    border-radius: 12px;
+    border: 4px dashed red;
+
+}
+
+
+@media screen and (max-width:576px) {
+    .my-imageg img{
+        height: 100%;
+        width: 100%;
+    }
+}

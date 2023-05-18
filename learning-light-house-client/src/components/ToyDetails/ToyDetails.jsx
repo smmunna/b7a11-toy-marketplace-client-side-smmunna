@@ -2,11 +2,6 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './ToyDetails.css'
 import ReactStars from "react-rating-stars-component";
-import { render } from "react-dom";
-import fullStar from '../../assets/images/star-full.png'
-import halfStart from '../../assets/images/half-star.png'
-import emptyStar from '../../assets/images/emptystar.png'
-
 
 const ToyDetails = () => {
     const data = useLoaderData()
