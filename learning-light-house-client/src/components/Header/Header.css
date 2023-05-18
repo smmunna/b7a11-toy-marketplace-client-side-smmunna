@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
+.navbar {
+    background-color: rgb(231, 251, 255);
+}
+
+.brand {
+    color: rgba(44, 81, 120, 0.984);
+    font-family: 'Mogra', cursive;
+}
+
+.button {
+    background-color: rgba(44, 81, 120, 0.984);
+}
+
+li {
+    color: rgb(96, 2, 2) !important;
+}
+
+li a {
+    background-color: rgb(231, 251, 255) !important;
+}
+.smscreenmenu{
+    background-color: rgb(231, 251, 255) !important;
+}
+.smscreenmenu li{
+    margin-bottom: 20px;
+}
+.menu-compact :where(li > *) {
+    font-size:1.2rem!important;
+}
