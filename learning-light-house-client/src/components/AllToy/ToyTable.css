@@ -1,0 +1,7 @@
+.toy-search {
+    border: 1px solid black;
+}
+
+.toy-search:focus {
+    border: 1px solid black;
+}
