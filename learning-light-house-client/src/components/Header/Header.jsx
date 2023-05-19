@@ -46,7 +46,7 @@ const Header = () => {
                     <>
                         <div className="navbar-end">
                             <>
-                                <div className="avatar mr-4 hidden flex items-center  md:block">
+                                <div className="avatar mr-4 hidden lg:flex items-center  md:block">
                                     <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                         <img src={user.photoURL} title={`${user?.displayName}`} />
                                     </div>

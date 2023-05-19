@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import EngShop from './EngShop';
+import LoadingImg from '../../../assets/images/loading.gif';
 
 const Shop = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const [engineering, setEngineering] = useState([])
     const [math, setMath] = useState([])
     const [science, setScience] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         engData(); // Fetch engineering data when the component mounts
@@ -15,23 +17,41 @@ const Shop = () => {
     const engData = () => {
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/category?cate=engineering`)
             .then(res => res.json())
-            .then(data => setEngineering(data))
+            .then(data => {
+                setEngineering(data)
+                setLoading(false)
+            })
     }
 
     const mathData = () => {
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/category?cate=math`)
             .then(res => res.json())
-            .then(data => setMath(data))
+            .then(data => {
+                setMath(data)
+                setLoading(false)
+            })
     }
     const scienceData = () => {
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/category?cate=science`)
             .then(res => res.json())
-            .then(data => setScience(data))
+            .then(data => {
+                setScience(data)
+                setLoading(false)
+            })
+    }
+
+    if (loading) {
+        return <div className='flex justify-center items-center'>
+            <div>
+                <img src={LoadingImg} width={120} alt="" />
+            </div>
+        </div>
     }
 
     return (
         <div className='px-6 py-5 md:px-20 md:py-5'>
-            <h3 className='text-center text-4xl font-semibold'>Shop by Category</h3>
+            <h3 className='text-center text-4xl font-semibold mb-12'>Shop by Category</h3>
+            <hr />
 
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>

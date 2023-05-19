@@ -3,6 +3,8 @@ import Banner from './Banner/Banner';
 import Gallery from './Gallery/Gallery';
 import Shop from './Shop/Shop';
 import { Helmet } from "react-helmet";
+import EngToys from './EngToys/EngToys';
+import Business from './Business/Business';
 
 const Home = () => {
     return (
@@ -14,6 +16,8 @@ const Home = () => {
             <Banner />
             <Gallery />
             <Shop />
+            <EngToys/>
+            <Business/>
         </div>
     );
 }

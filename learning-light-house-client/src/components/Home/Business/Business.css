@@ -1,0 +1,15 @@
+.business {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.573), rgba(210, 87, 25, 0.881)), url("../../../assets/images/eng2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.btn {
+    background-color: rgba(250, 235, 215, 0.954);
+    color: black;
+}
+
+.btn:hover {
+    background-color: rgba(250, 235, 215, 0.842);
+}
