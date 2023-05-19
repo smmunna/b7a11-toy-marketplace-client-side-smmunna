@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from '../../provider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 const AddToy = () => {
 
-    const{user} =useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const handleToyAddSubmit = event => {
         event.preventDefault()
@@ -38,6 +39,10 @@ const AddToy = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Add Toys | Learning Lighthouse</title>
+            </Helmet>
+            
             <h3 className='text-center text-2xl font-semibold py-5'>Add a Toy</h3>
             <hr />
             <div className='grid justify-center py-4'>
@@ -61,7 +66,7 @@ const AddToy = () => {
                                     <label className="label">
                                         <span className="label-text">Seller Email</span>
                                     </label>
-                                    <input type="text" name='selleremail' placeholder=" Seller Email"  defaultValue={user?.email} disabled required className="p-2 bg-slate-300" />
+                                    <input type="text" name='selleremail' placeholder=" Seller Email" defaultValue={user?.email} disabled required className="p-2 bg-slate-300" />
                                 </div>
                                 {/* Category */}
                                 <label className="label">

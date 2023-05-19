@@ -9,7 +9,7 @@ const EngShop = ({ engdata }) => {
     }
     return (
         <div className="card w-full bg-base-100 shadow-xl" data-aos="fade-right">
-            <figure><img src={img} className='p-5' alt="Shoes" /></figure>
+            <figure><img src={img} className='p-5 h-56' alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p>Price: ${price}</p>

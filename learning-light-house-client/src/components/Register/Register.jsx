@@ -1,9 +1,13 @@
 import React from 'react';
 import register from '../../assets/images/welcome.png'
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     return (
         <div className="lg:px-20 hero min-h-screen">
+            <Helmet>
+                <title>Register | Learning Lighthouse</title>
+            </Helmet>
             <div className="lg:flex">
                 <div className="text-center lg:text-left">
                     <div>

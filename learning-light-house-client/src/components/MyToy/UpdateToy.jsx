@@ -2,6 +2,7 @@ import React from 'react';
 import './UpdateToy.css';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { Helmet } from "react-helmet";
 
 const UpdateToy = () => {
     const data = useLoaderData()
@@ -38,7 +39,9 @@ const UpdateToy = () => {
     }
     return (
         <div>
-
+            <Helmet>
+                <title>Update Toys | Learning Lighthouse</title>
+            </Helmet>
             <div className="">
                 <div className="flex justify-center items-center border-2 p-6">
                     <div className='px-5'>

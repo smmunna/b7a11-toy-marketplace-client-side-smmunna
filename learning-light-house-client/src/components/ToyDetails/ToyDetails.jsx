@@ -2,11 +2,16 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import './ToyDetails.css'
 import ReactStars from "react-rating-stars-component";
+import { Helmet } from "react-helmet";
 
 const ToyDetails = () => {
     const data = useLoaderData()
     return (
         <div className='details-card px-5 py-5 md:px-20'>
+            <Helmet>
+                <title>Toy Details | Learning Lighthouse</title>
+            </Helmet>
+            
             <h3 className='text-3xl text-center mb-2  font-semibold'>Details</h3>
             <hr />
             <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-10'>

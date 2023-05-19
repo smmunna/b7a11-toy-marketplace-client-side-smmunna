@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import ToyTable from './ToyTable';
 import './ToyTable.css'
 import { AuthContext } from '../../provider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 const AllToy = () => {
     const datas = useLoaderData()
@@ -48,6 +49,9 @@ const AllToy = () => {
 
     return (
         <div className='px-5 md:px-20 my-3'>
+            <Helmet>
+                <title>All Toys | Learning Lighthouse</title>
+            </Helmet>
             <h3 className='text-center text-2xl font-semibold py-4'>All Toy's</h3>
             <hr />
             <div className='py-4'>
