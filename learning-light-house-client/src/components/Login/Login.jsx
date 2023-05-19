@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import signin from '../../assets/images/signin.png'
 import GoogleLogo from '../../assets/images/googleicon.png'
 import './Login.css'
@@ -7,7 +7,8 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from "react-helmet";
 
 const Login = () => {
-    const { user, googleSignIn, loading } = useContext(AuthContext);
+    const { user, googleSignIn, signInUser, loading } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState('');
     const navigate = useNavigate()
     const location = useLocation()
     // Getting the exact path;
@@ -18,6 +19,24 @@ const Login = () => {
             navigate(from, { replace: true })
         }
     }, [googleSignIn])
+
+    const handleLogin = (event) => {
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        signInUser(email, password)
+            .then(result => {
+                const user = result.user;
+
+            })
+            .catch(error => {
+                const errorMessage = 'Invalid Useremail/Password';
+                setLoginError(errorMessage)
+            })
+
+    }
 
     return (
         <div className="lg:px-20 hero min-h-screen">
@@ -31,20 +50,21 @@ const Login = () => {
                     </div>
                 </div>
                 <div className=" shadow-2xl bg-slate-100 lg:w-2/3">
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <div className="card-body">
                             <h3 className='text-2xl font-semibold'>Please Login</h3>
+                            <p>{loginError ? <span className='text-red-600 font-semibold'>{loginError}</span> : ''}</p>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder=" Enter your email" required className="py-2" />
+                                <input type="text" name='email' placeholder=" Enter your email" required className="py-2" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder=" Enter your password" required className="py-2" />
+                                <input type="text" name='password' placeholder=" Enter your password" required className="py-2" />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-info w-52">Login</button>
