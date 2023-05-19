@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyByMWTGEkznMz_tWbaq7mt5Cvz-h9rRTJQ",
-  authDomain: "learning-lighthouse.firebaseapp.com",
-  projectId: "learning-lighthouse",
-  storageBucket: "learning-lighthouse.appspot.com",
-  messagingSenderId: "1083317791238",
-  appId: "1:1083317791238:web:c298e720fb0fdbd40e3187"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
