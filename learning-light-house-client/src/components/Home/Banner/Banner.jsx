@@ -28,7 +28,7 @@ const Banner = () => {
                     <div className='slider-image slider-image1'>
                         <div className='space-y-4 px-16 py-32 md:px-16 lg:py-52 lg:px-36'>
                             <h3 className='text-3xl md:text-5xl font-semibold'>Build, Create, and Innovate with Engineering Kits</h3>
-                            <p className='md:pr-52 lg:pr-96 text-slate-300'>Discover the exciting world of engineering with our range of engineering kits. These kits are designed to inspire young minds and foster creativity and problem-solving skills.</p>
+                            <p className='md:pr-52 lg:pr-96 text-slate-300'>Discover the exciting world of engineering with our range of engineering kits. These kits are designed to inspire young minds and foster creativity and problem-solving skills. </p>
                             <button className='button p-3  hover:btn-warning rounded-lg w-40'>Learn more</button>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ const Banner = () => {
                     <div className='slider-image slider-image2'>
                         <div className='space-y-4 px-16 py-32 md:px-16 lg:py-52 lg:px-36'>
                             <h3 className='text-3xl md:text-5xl font-semibold'>Explore the Wonders of Mathematics with Math Kits</h3>
-                            <p className='md:pr-52 lg:pr-96 text-slate-300' >Make math fun and engaging with our collection of math kits. These kits combine learning and play to help children develop a strong foundation in mathematical concepts.From counting and shapes to fractions and algebra, our math kits offer interactive activities and games that make learning math enjoyable.</p>
+                            <p className='md:pr-52 lg:pr-96 text-slate-300' >Make math fun and engaging with our collection of math kits. These kits combine learning and play to help children develop a strong foundation in mathematical concepts.</p>
                             <button className='button p-3  hover:btn-warning rounded-lg w-40'>Learn more</button>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const Banner = () => {
                     <div className='slider-image slider-image3'>
                         <div className='space-y-4 px-16 py-32 md:px-16 lg:py-52 lg:px-36'>
                             <h3 className='text-3xl md:text-5xl font-semibold'>Unleash Curiosity and Discover the Marvels of Science with Science Kits</h3>
-                            <p className='md:pr-52 lg:pr-96 text-slate-300'>Ignite your child's passion for science with our captivating science kits. These kits bring science to life by offering hands-on experiments and investigations. From chemistry and physics to biology and astronomy, our science kits cover a wide range of scientific disciplines.</p>
+                            <p className='md:pr-52 lg:pr-96 text-slate-300'>Ignite your child's passion for science with our captivating science kits. These kits bring science to life by offering hands-on experiments and investigations. </p>
                             <button className='button p-3  hover:btn-warning rounded-lg w-40'>Learn more</button>
                         </div>
                     </div>
