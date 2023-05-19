@@ -7,7 +7,7 @@ const ToyTable = ({ data, index }) => {
     return (
         <>
             <tr>
-                <td>{index + 1}</td>
+                {/* <td>{index + 1}</td> */}
                 <td>{name}</td>
                 <td>{category}</td>
                 <td>${price}</td>

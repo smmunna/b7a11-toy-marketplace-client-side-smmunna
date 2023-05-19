@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ToyTable from './ToyTable';
 import './ToyTable.css'
@@ -15,6 +15,31 @@ const AllToy = () => {
             .then(res => res.json())
             .then(data => setmytoysData(data))
     }
+
+    useEffect(() => {
+        fetch('http://localhost:5000/toys/totalProducts')
+            .then(res => res.json())
+            .then(data => setTotalProducts(data.totalProducts))
+    }, [])
+    const [totalproducts, setTotalProducts] = useState(null)
+    const [itemsPerPage, setItemsPerPage] = useState(5)
+    const [currentpage, setCurrentpage] = useState(0);
+    const totalPages = Math.ceil(totalproducts / itemsPerPage)
+    const pageNumbers = [...Array(totalPages).keys()]
+
+    // Dropdown options
+    const options = [5, 10, 20]
+    function handleSelectChange(event) {
+        setItemsPerPage(parseInt(event.target.value))
+        setCurrentpage(0)
+    }
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/toys?page=${currentpage}&limit=${itemsPerPage}`)
+            .then(res => res.json())
+            .then(data => setmytoysData(data))
+    }, [currentpage, itemsPerPage])
+
     return (
         <div className='px-5 md:px-20 my-3'>
             <h3 className='text-center text-2xl font-semibold py-4'>All Toy's</h3>
@@ -30,7 +55,7 @@ const AllToy = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            {/* <th></th> */}
                             <th>Name</th>
                             <th>Category</th>
                             <th>Price</th>
@@ -62,6 +87,30 @@ const AllToy = () => {
 
                     </tbody>
                 </table>
+            </div>
+
+            {/* Page Numbers will be here */}
+            <div>
+                <div className='btn-group flex justify-center py-5'>
+                    {
+                        pageNumbers.map(number => <button
+                            style={{ marginRight: '12px' }}
+                            className={currentpage == number ? 'btn' : 'btn btn-active'}
+                            key={number}
+                            onClick={() => setCurrentpage(number)}
+                        >{number + 1}</button>)
+                    }
+                    {/* Options value */}
+                    <select value={itemsPerPage} className='select select-bordered' onChange={handleSelectChange}>
+                        {
+                            options.map(option => (
+                                <option key={option} value={option}>
+                                    {option}
+                                </option>
+                            ))
+                        }
+                    </select>
+                </div>
             </div>
         </div>
     );
