@@ -3,14 +3,20 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { Helmet } from "react-helmet";
+import LoadingImg from '../../assets/images/loading.gif'
 
 const MyToy = () => {
     const { user } = useContext(AuthContext)
     const [mytoys, setMytoys] = useState([])
+    const [loading,setLoading]=useState(true)
     useEffect(() => {
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/mytoys?email=${user.email}`)
             .then(res => res.json())
-            .then(data => setMytoys(data))
+            .then(data =>{
+                setMytoys(data)
+                setLoading(false)
+
+            })
     }, [])
 
 
@@ -41,6 +47,13 @@ const MyToy = () => {
         })
     }
 
+    if(loading){
+        return <div className='flex justify-center items-center py-12'>
+           <div>
+           <img src={LoadingImg} width={120} alt="" />
+           </div>
+        </div>
+    }
 
     if (mytoys.length <= 0) {
         return <div className='text-2xl font-semibold text-center text-red-600 py-10'>Not found any data......!</div>

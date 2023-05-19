@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ToyTable from './ToyTable';
 import './ToyTable.css'
-import { AuthContext } from '../../provider/AuthProvider';
 import { Helmet } from "react-helmet";
+import Loaderimg from '../../assets/images/loading.gif'
 
 const AllToy = () => {
     const datas = useLoaderData()
     const [mytoysData, setmytoysData] = useState(datas)
-    const { user } = useContext(AuthContext)
+    const [loading, setLoading] = useState(true)
 
     const handleSearchSubmit = event => {
         event.preventDefault()
@@ -16,7 +16,10 @@ const AllToy = () => {
         const searchText = form.searchText.value;
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/search?name=${searchText}`)
             .then(res => res.json())
-            .then(data => setmytoysData(data))
+            .then(data => {
+                setmytoysData(data)
+                setLoading(false)
+            })
     }
 
     useEffect(() => {
@@ -40,11 +43,22 @@ const AllToy = () => {
     useEffect(() => {
         fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys?page=${currentpage}&limit=${itemsPerPage}`)
             .then(res => res.json())
-            .then(data => setmytoysData(data))
+            .then(data => {
+                setmytoysData(data)
+                setLoading(false)
+            })
     }, [currentpage, itemsPerPage])
 
+    if (loading) {
+        return <div className='flex justify-center items-center py-14'>
+            <div>
+                <img src={Loaderimg} width={120} alt="" />
+            </div>
+        </div>
+    }
+
     if (mytoysData.length <= 0) {
-        return <div className='text-2xl font-semibold text-center text-red-600 py-10'>Loading......</div>
+        return <div className='text-2xl font-semibold text-center text-red-600 py-10'>No data found......</div>
     }
 
     return (
