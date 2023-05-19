@@ -6,8 +6,9 @@ const Footer = () => {
     const date = new Date()
     const year = date.getFullYear()
     return (
-        <div>
-            <footer className="footer p-10 bg-black text-white  lg:px-20">
+        <div className='mt-5'>
+        <hr />
+            <footer className="footer p-10 bg-slate-100 text-black  lg:px-20 lg:py-20">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Science Kits</a>
@@ -29,7 +30,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300">
+            <footer className="footer px-10 pt-5 border-t  text-black border-base-300">
                 <div className="items-center grid-flow-col">
                     <img src={Logo} width={60} alt="" />
                     <p className='footer-brand'><span className='text-lg'>Learning Lighthouse </span><br />Developed by Minhazul Abedin Munna Copyright {year} &copy; </p>

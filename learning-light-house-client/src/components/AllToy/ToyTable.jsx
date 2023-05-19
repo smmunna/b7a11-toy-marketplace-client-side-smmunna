@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const ToyTable = ({ data, index }) => {
     const { _id, name, sellername, selleremail, category, quantity, rating, price } = data;
+    const { user } = useContext(AuthContext)
 
     return (
         <>
@@ -12,9 +14,7 @@ const ToyTable = ({ data, index }) => {
                 <td>{category}</td>
                 <td>${price}</td>
                 <td>{quantity}</td>
-                <td><Link to={`/toydetails/${_id}`}><span className='btn btn-info'>Details</span></Link></td>
-                <td className='text-center'><span className='btn btn-error'>Delete</span></td>
-                <td className='text-center'><label htmlFor="my-modal-3" className='btn btn-accent'>Update</label></td>
+                <td><Link to={`/toydetails/${_id}`}><span className='btn btn-info' >Details</span></Link></td>
             </tr>
 
             {/* Modal For showing all datas */}

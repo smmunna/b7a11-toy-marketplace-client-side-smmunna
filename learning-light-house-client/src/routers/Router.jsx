@@ -10,12 +10,13 @@ import Blogs from '../components/Blogs/Blogs';
 import Register from '../components/Register/Register';
 import Login from '../components/Login/Login';
 import ToyDetails from '../components/ToyDetails/ToyDetails';
+import PrivateRoutes from '../privateRoutes/PrivateRoutes';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
-        errorElement:<Error/>,
+        errorElement: <Error />,
         children: [
             {
                 path: "/",
@@ -24,20 +25,20 @@ const router = createBrowserRouter([
             {
                 path: "/alltoys",
                 element: <AllToy />,
-                loader:()=>fetch('https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys')
+                loader: () => fetch('https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys')
             },
             {
                 path: "/toydetails/:id",
-                element: <ToyDetails />,
-                loader:({params})=>fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/${params.id}`)
+                element: <PrivateRoutes><ToyDetails /></PrivateRoutes>,
+                loader: ({ params }) => fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/${params.id}`)
             },
             {
                 path: "/addtoys",
-                element: <AddToy />
+                element: <PrivateRoutes><AddToy /></PrivateRoutes>
             },
             {
                 path: "/mytoys",
-                element: <MyToy />
+                element: <PrivateRoutes><MyToy /></PrivateRoutes>
             },
             {
                 path: "/blogs",
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
             },
         ]
     },
-    
+
 ]);
 
 export default router;

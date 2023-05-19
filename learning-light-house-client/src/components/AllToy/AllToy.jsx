@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ToyTable from './ToyTable';
 import './ToyTable.css'
+import { AuthContext } from '../../provider/AuthProvider';
 
 const AllToy = () => {
     const datas = useLoaderData()
     const [mytoysData, setmytoysData] = useState(datas)
+    const{user} = useContext(AuthContext)
 
     const handleSearchSubmit = event => {
         event.preventDefault()
@@ -35,7 +37,7 @@ const AllToy = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?page=${currentpage}&limit=${itemsPerPage}`)
+        fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys?page=${currentpage}&limit=${itemsPerPage}`)
             .then(res => res.json())
             .then(data => setmytoysData(data))
     }, [currentpage, itemsPerPage])
@@ -61,7 +63,6 @@ const AllToy = () => {
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>View</th>
-                            <th colSpan={2} className='text-center'>Options</th>
                         </tr>
                     </thead>
                     <tbody>

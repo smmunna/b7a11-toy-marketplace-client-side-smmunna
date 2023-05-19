@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const AddToy = () => {
+
+    const{user} =useContext(AuthContext)
 
     const handleToyAddSubmit = event => {
         event.preventDefault()
@@ -52,13 +55,13 @@ const AddToy = () => {
                                     <label className="label">
                                         <span className="label-text">Seller Name</span>
                                     </label>
-                                    <input type="text" name='sellername' placeholder=" Seller Name" required className="py-2" />
+                                    <input type="text" name='sellername' placeholder=" Seller Name" defaultValue={user?.displayName} disabled required className="p-2 bg-slate-300" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Seller Email</span>
                                     </label>
-                                    <input type="text" name='selleremail' placeholder=" Seller Name" required className="py-2" />
+                                    <input type="text" name='selleremail' placeholder=" Seller Email"  defaultValue={user?.email} disabled required className="p-2 bg-slate-300" />
                                 </div>
                                 {/* Category */}
                                 <label className="label">

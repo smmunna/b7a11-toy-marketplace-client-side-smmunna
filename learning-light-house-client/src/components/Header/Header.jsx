@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
 import Logo from '../../assets/favicon/fav_ico.png'
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Header = () => {
+    const { user, logOut, loading } = useContext(AuthContext)
     const navLink = <>
         <li><ActiveLink to="/">Home</ActiveLink></li>
         <li><ActiveLink to="/alltoys">All Toys</ActiveLink></li>
-        <li><ActiveLink to="/addtoys">Add Toys</ActiveLink></li>
-        <li><ActiveLink to="/mytoys">My Toys</ActiveLink></li>
+        {
+            user ?
+                <>
+                    <li><ActiveLink to="/addtoys">Add Toys</ActiveLink></li>
+                    <li><ActiveLink to="/mytoys">My Toys</ActiveLink></li>
+                </>
+                :
+                <>
+                    
+                </>
+        }
         <li><ActiveLink to="/blogs">Blogs</ActiveLink></li>
     </>
     return (
@@ -30,9 +41,27 @@ const Header = () => {
                     {navLink}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to="/login" className='button p-2 text-white rounded w-32 text-center hover:bg-warning'>Login</Link>
-            </div>
+            {
+                user ?
+                    <>
+                        <div className="navbar-end">
+                            <>
+                                <div className="avatar mr-4 hidden flex items-center  md:block">
+                                    <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                        <img src={user.photoURL} title={`${user?.displayName}`} />
+                                    </div>
+                                </div>
+                            </>
+                            <Link className='button p-2 text-white rounded w-32 text-center hover:bg-warning' onClick={logOut}>Logout</Link>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div className="navbar-end">
+                            <Link to="/login" className='button p-2 text-white rounded w-32 text-center hover:bg-warning'>Login</Link>
+                        </div>
+                    </>
+            }
         </div>
     );
 }
