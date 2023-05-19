@@ -11,8 +11,13 @@ const MyToy = () => {
             .then(res => res.json())
             .then(data => setMytoys(data))
     }, [])
+
+    if(mytoys.length<=0){
+        return <div className='text-2xl font-semibold text-center text-red-600 py-10'>Loading......</div>
+    }
+
     return (
-        <div className='py-5'>
+        <div className='py-5 px-20'>
             <h3 className='text-center text-2xl font-semibold'>{user?.displayName ? <>{user.displayName},</> : <>Dear User,</>} You've added these toys.</h3>
             <hr />
             <br />
@@ -36,13 +41,12 @@ const MyToy = () => {
                             mytoys.map(mytoy => (
                                 <tr key={mytoy._id}>
                                     <td>{mytoy.name}</td>
-                                    <td> ${mytoy.price}</td>
+                                    <td> ${mytoy?.price}</td>
                                     <td>{mytoy.quantity}</td>
                                     <td>{mytoy.category}</td>
                                     <td className='text-center'><Link to={`/toydetails/${mytoy._id}`}><span className='btn btn-info' >View Details</span></Link></td>
-                                    <td className='text-center'><label htmlFor="my-modal-3" className="btn btn-accent">Update</label></td>
+                                    <td className='text-center'><Link to={`/update/${mytoy._id}`}><button className="btn btn-accent">Update</button></Link></td>
                                     <td className='text-center'><button className='btn btn-error'>Delete</button></td>
-                                    <UpdateToy mytoy={mytoy}/>
                                 </tr>
                             ))
                         }

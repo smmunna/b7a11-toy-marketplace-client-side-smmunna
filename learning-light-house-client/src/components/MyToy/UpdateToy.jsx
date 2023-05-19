@@ -1,25 +1,55 @@
 import React from 'react';
 import './UpdateToy.css';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const UpdateToy = ({ mytoy }) => {
-    const { price, quantity, description } = mytoy
+const UpdateToy = () => {
+    const data = useLoaderData()
+    const navigate = useNavigate()
+    // console.log(data)
+
+    const handleUpdateSubmit = (event) => {
+        event.preventDefault()
+        const form = event.target;
+        const price = form.price.value;
+        const quantity = form.quantity.value;
+        const description = form.description.value;
+
+        const updateData = { price, quantity, description }
+
+        fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/${data._id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    Swal.fire(
+                        'Updated Successfully',
+                        'success'
+                    )
+                    navigate('/mytoys')
+                }
+            })
+
+    }
     return (
         <div>
-            {/* Updating the content */}
-            {/* Put this part before </body> tag */}
-            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-            <div className="modal">
-                <div className="modal-box relative">
+
+            <div className="">
+                <div className="flex justify-center items-center border-2 p-6">
                     <div className='px-5'>
-                        <form>
-                            <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <form onSubmit={handleUpdateSubmit}>
                             <label htmlFor="">Price:</label> <br />
-                            <input type="number" name='price' placeholder="Give the price" defaultValue={price} className="mb-3 modal-input mt-3 w-full" /> <br />
+                            <input type="number" name='price' placeholder="Give the price" defaultValue={data.price} className="mb-3 modal-input mt-3 w-96" /> <br />
                             <label htmlFor="">Description:</label> <br />
-                            <input type="text" name='description' placeholder="Description" defaultValue={description} className="modal-input mt-3  w-full " /> <br />
+                            <input type="text" name='description' placeholder="Description" defaultValue={data.description} className="modal-input mt-3  w-96 " /> <br />
                             <br />
                             <label htmlFor="">Quantity: </label> <br />
-                            <select name="quantity" className='select mt-3 w-full'>
+                            <select name="quantity" className='select mt-3 w-96'>
                                 <option value="Available">Available</option>
                                 <option value="Not Available">Not Available</option>
                             </select>

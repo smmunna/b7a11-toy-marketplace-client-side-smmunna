@@ -7,7 +7,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const AllToy = () => {
     const datas = useLoaderData()
     const [mytoysData, setmytoysData] = useState(datas)
-    const{user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const handleSearchSubmit = event => {
         event.preventDefault()
@@ -41,6 +41,10 @@ const AllToy = () => {
             .then(res => res.json())
             .then(data => setmytoysData(data))
     }, [currentpage, itemsPerPage])
+
+    if (mytoysData.length <= 0) {
+        return <div className='text-2xl font-semibold text-center text-red-600 py-10'>Loading......</div>
+    }
 
     return (
         <div className='px-5 md:px-20 my-3'>

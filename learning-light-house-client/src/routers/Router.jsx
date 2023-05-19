@@ -11,6 +11,7 @@ import Register from '../components/Register/Register';
 import Login from '../components/Login/Login';
 import ToyDetails from '../components/ToyDetails/ToyDetails';
 import PrivateRoutes from '../privateRoutes/PrivateRoutes';
+import UpdateToy from '../components/MyToy/UpdateToy';
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path: "/mytoys",
                 element: <PrivateRoutes><MyToy /></PrivateRoutes>,
+            },
+            {
+                path: "/update/:id",
+                element: <PrivateRoutes><UpdateToy /></PrivateRoutes>,
+                loader:({params})=>fetch(`https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/${params.id}`)
             },
             {
                 path: "/blogs",
