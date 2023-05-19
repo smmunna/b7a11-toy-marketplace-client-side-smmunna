@@ -1,0 +1,12 @@
+.modal-input{
+    border: 1px solid black;
+    padding: 12px;
+    margin-left: 5px;
+}
+.modal-input:focus{
+    border: 1px solid black;
+}
+
+.select{
+    border: 1px solid black;
+}
