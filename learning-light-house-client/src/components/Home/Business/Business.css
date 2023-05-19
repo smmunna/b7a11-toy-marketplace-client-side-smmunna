@@ -5,11 +5,11 @@
     background-position: center;
 }
 
-.btn {
+.myextrabtn {
     background-color: rgba(250, 235, 215, 0.954);
     color: black;
 }
 
-.btn:hover {
+.myextrabtn:hover {
     background-color: rgba(250, 235, 215, 0.842);
 }

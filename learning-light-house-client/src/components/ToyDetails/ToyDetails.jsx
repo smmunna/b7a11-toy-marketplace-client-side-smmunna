@@ -11,7 +11,7 @@ const ToyDetails = () => {
             <Helmet>
                 <title>Toy Details | Learning Lighthouse</title>
             </Helmet>
-            
+
             <h3 className='text-3xl text-center mb-2  font-semibold'>Details</h3>
             <hr />
             <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-10'>

@@ -1,0 +1,5 @@
+.myfullcard {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.982), rgba(232, 232, 232, 0.16)), url('../../../assets/images/section5.jpg');
+    background-size: cover;
+    background-position: center;
+}

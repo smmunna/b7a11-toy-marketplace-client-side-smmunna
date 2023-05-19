@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import EngShop from './EngShop';
 import LoadingImg from '../../../assets/images/loading.gif';
+import './Shop.css'
 
 const Shop = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -55,7 +56,7 @@ const Shop = () => {
 
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
-                    <div className='flex justify-center mt-5'>
+                    <div className='flex justify-center my-5'>
                         <Tab onClick={engData}>Engineering</Tab>
                         <Tab onClick={scienceData}>Science</Tab>
                         <Tab onClick={mathData}>Math</Tab>
