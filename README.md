@@ -51,8 +51,10 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
    ### Add Toy
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/532c2211-b350-46ca-b082-4df34c91dd0a" width="1440" height="500" alt="Phone">
    
-   ### My Toys
-   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/c9f6d9ff-ef4a-41f9-8f6e-0b921c841332" width="1440" height="500" alt="Phone">
+   ### My Toys (with ascending order sorting)
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/908b28c5-8c4f-4627-b01c-c4a2fba84df2" width="1440" height="500" alt="Phone">
+
+
    
    ### Update Toys
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/66d410d5-e0f9-4ed5-8021-28ece1f4858b" width="1440" height="500" alt="Phone">
