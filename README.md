@@ -27,6 +27,9 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
 ### After Login/Register
    > User will redirect to his exact path and in the navbar ***Add Toy & My Toy*** will add. You can add the toy and then in the mytoy page you can update and delete the toy.
    > Every add, delete and Update there will be some ***Toast Message*** there.
+ 
+### My Toy (Sorting)
+   > In the mytoy page i've sorted the item into ascending order depending on the price.
 
 ### Footer
    > In the footer part, Some important Links, Contact Info , Copright info & some social link there.
