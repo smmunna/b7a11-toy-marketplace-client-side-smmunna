@@ -2,6 +2,7 @@
 
 .navbar {
     background-color: rgb(231, 251, 255);
+    border-bottom: 2px solid rgb(202, 225, 245);
 }
 
 .brand {
