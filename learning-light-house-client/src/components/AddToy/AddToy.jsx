@@ -22,7 +22,7 @@ const AddToy = () => {
 
         const toyInfo = { name, sellername, selleremail, category, price, rating, quantity, img, description }
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

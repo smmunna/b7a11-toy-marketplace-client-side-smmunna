@@ -4,7 +4,7 @@ import './EngToy.css'
 
 const EngToys = () => {
     return (
-        <div className='EngToys px-10 lg:px-20 py-20 lg:mt-20 grid grid-cols-1 lg:grid-cols-2 justify-center items-center ' >
+        <div className='EngToys px-10 lg:px-20 py-20 lg:mt-8 grid grid-cols-1 lg:grid-cols-2 justify-center items-center ' >
             <div className='space-y-6'>
                 <h3 className='text-3xl font-semibold'>Build and customize stunning Education / Engineering / Math Toys in minutes – easily.</h3>
                 <p className=''>Huge collection of elements, rich customizability, flexible layouts, and fast results!

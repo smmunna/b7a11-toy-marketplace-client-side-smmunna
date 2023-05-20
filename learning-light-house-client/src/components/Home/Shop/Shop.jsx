@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import EngShop from './EngShop';
 import LoadingImg from '../../../assets/images/loading.gif';
 import './Shop.css'
+import Swal from 'sweetalert2';
 
 const Shop = () => {
     const [tabIndex, setTabIndex] = useState(0);
@@ -49,6 +50,16 @@ const Shop = () => {
         </div>
     }
 
+    // See More button activity update later;
+    const handleSeemore = () => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Software is now under the development phase, Updates will come very soon.',
+            footer: '<a href="https://www.facebook.com/smmunna21" target="_blank">Why do I have this issue?</a>'
+        })
+    }
+
     return (
         <div className='px-6 py-5 md:px-20 md:py-5'>
             <h3 className='text-center text-4xl font-semibold mb-12'>Shop by Category</h3>
@@ -78,8 +89,8 @@ const Shop = () => {
                                     }
 
                                 </div>
-                                <div className='text-center my-5'>
-                                    <button className='btn btn-secondary'>See More</button>
+                                <div className='text-center mt-12'>
+                                    <button className='btn btn-secondary' onClick={handleSeemore}>See More</button>
                                 </div>
                             </>
                             :
@@ -113,8 +124,8 @@ const Shop = () => {
                                     }
 
                                 </div>
-                                <div className='text-center my-5'>
-                                    <button className='btn btn-secondary'>See More</button>
+                                <div className='text-center mt-12'>
+                                    <button className='btn btn-secondary' onClick={handleSeemore}>See More</button>
                                 </div>
                             </>
                             :
@@ -148,8 +159,8 @@ const Shop = () => {
                                     }
 
                                 </div>
-                                <div className='text-center my-5'>
-                                    <button className='btn btn-secondary'>See More</button>
+                                <div className='text-center mt-12'>
+                                    <button className='btn btn-secondary' onClick={handleSeemore}>See More</button>
                                 </div>
                             </>
                             :

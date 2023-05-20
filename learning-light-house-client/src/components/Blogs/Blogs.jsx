@@ -3,13 +3,13 @@ import { Helmet } from "react-helmet";
 
 const Blogs = () => {
     return (
-        <div className='px-10 lg:px-20'>
+        <div className='px-10 lg:px-20 lg:mb-8'>
             <Helmet>
                 <title>Blogs Toys | Learning Lighthouse</title>
             </Helmet>
             <h3 className='text-center text-3xl py-5'>Blogs Page</h3>
             <hr />
-            <div>
+            <div className='md:border-2 md:p-5'>
                 <div className='mt-3'>
                     <h3 className='font-semibold'>1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h3>
                     <div className='md:px-5 my-2 text-justify'>

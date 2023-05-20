@@ -23,7 +23,7 @@ const AllToy = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys/totalProducts')
+        fetch('https://b7a11-toy-marketplace-server-side-smmunna.vercel.app/toys/totalProducts')
             .then(res => res.json())
             .then(data => setTotalProducts(data.totalProducts))
     }, [])
@@ -70,7 +70,7 @@ const AllToy = () => {
             <hr />
             <div className='py-4'>
                 <form onSubmit={handleSearchSubmit}>
-                    <input type="text" name='searchText' className='toy-search p-2' placeholder='Search by name' />
+                    <input type="text" name='searchText' className='toy-search p-2' placeholder='Search by name' required />
                     <button className='mysearchbtn ml-2'>Search</button>
                 </form>
             </div>
