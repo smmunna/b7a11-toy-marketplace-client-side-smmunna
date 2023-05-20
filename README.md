@@ -36,9 +36,42 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
    ### For Mobile Device
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/333a9ab5-dba8-4207-b918-99c64bf159c8" width="425" height="500" alt="Phone">
    
-   ### For Desktop/Lapto
+   ### For Desktop/Laptop
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/b92cd0ed-f4ea-4946-9777-1bdddcf44d65" width="1440" height="500" alt="Phone">
    
+   ### Category Data
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/9610b856-5cd3-4f20-8835-14f128cbee4c" width="1440" height="500" alt="Phone">
+   
+   ### All Toys
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/2940b853-79e7-4db1-ac83-59986fb202e0" width="1440" height="500" alt="Phone">
+   
+   ### Add Toy
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/532c2211-b350-46ca-b082-4df34c91dd0a" width="1440" height="500" alt="Phone">
+   
+   ### My Toys
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/c9f6d9ff-ef4a-41f9-8f6e-0b921c841332" width="1440" height="500" alt="Phone">
+   
+   ### Update Toys
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/66d410d5-e0f9-4ed5-8021-28ece1f4858b" width="1440" height="500" alt="Phone">
+
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/e7124251-cf30-457f-83e2-0eac5b764b88" width="1440" height="500" alt="Phone">
+   
+   ### Delete Operation
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/16eedf03-9ba4-410f-ae19-632b833bdac5" width="1440" height="500" alt="Phone">
+
+
+
+
+
+
+   
+
+  
+
+
+
+   
+
 
 
    
