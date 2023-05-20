@@ -54,10 +54,33 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
    ### Update Toys
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/66d410d5-e0f9-4ed5-8021-28ece1f4858b" width="1440" height="500" alt="Phone">
 
+  ### Update Message
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/e7124251-cf30-457f-83e2-0eac5b764b88" width="1440" height="500" alt="Phone">
    
    ### Delete Operation
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/16eedf03-9ba4-410f-ae19-632b833bdac5" width="1440" height="500" alt="Phone">
+   
+   ### Login Error
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/7be5c4d5-c6f1-434e-b65f-c06ef47fd27e" width="1440" height="500" alt="Phone">
+   
+   ### Register Error
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/5b2a625b-c087-43e5-8dd6-d43e96f3f48f" width="1440" height="500" alt="Phone">
+   
+   
+   
+-------------------------------------
+
+### Thank You
+`And others all the functionality works properly` <br>
+**Kindness is like snow- It beautifies everything it covers.** ♥⌚ <br>
+
+> Minhazul Abedin Munna <br>
+>DATE:20 MAY 2023, 06:08PM
+
+
+
+
+
 
 
 
