@@ -34,7 +34,7 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
 ## Fully Responsive
 
    ### For Mobile Device
-   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/333a9ab5-dba8-4207-b918-99c64bf159c8" width="300" height="500" alt="Phone">
+   <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/333a9ab5-dba8-4207-b918-99c64bf159c8" width="425" height="500" alt="Phone">
    
    ### For Desktop/Lapto
    <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/b92cd0ed-f4ea-4946-9777-1bdddcf44d65" width="1440" height="500" alt="Phone">
