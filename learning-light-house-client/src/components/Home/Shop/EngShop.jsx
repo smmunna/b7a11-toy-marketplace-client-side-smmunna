@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './EngShop.css'
 import ReactStars from "react-rating-stars-component";
-import { render } from "react-dom";
+import { AuthContext } from '../../../provider/AuthProvider';
 
 const EngShop = ({ engdata }) => {
+    const { user } = useContext(AuthContext)
     const { _id, name, price, rating, img } = engdata
+
     const hadlebtn = () => {
-        Swal.fire('You have to login first ... !')
+        if (!user) {
+            Swal.fire('You have to login first ... !')
+        }
     }
     return (
         <div className="card myfullcard w-full bg-base-100 shadow-xl" data-aos="fade-right">
