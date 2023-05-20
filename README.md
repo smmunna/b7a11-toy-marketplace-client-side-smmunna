@@ -31,8 +31,9 @@ b7a11-toy-marketplace-client-side-smmunna created by GitHub Classroom
 ### Footer
    > In the footer part, Some important Links, Contact Info , Copright info & some social link there.
 
-### Fully Responsive
-  1. For Mobile Device
-    > <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/333a9ab5-dba8-4207-b918-99c64bf159c8" width="200" height="200" alt="Phone">
+## Fully Responsive
+    For Mobile Device
+    > <img src="https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-smmunna/assets/64527538/333a9ab5-dba8-4207-b918-99c64bf159c8" width="300" height="500" alt="Phone">
+   
 
 
