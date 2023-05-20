@@ -64,7 +64,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder=" Enter your password" required className="py-2" />
+                                <input type="password" name='password' placeholder=" Enter your password" required className="py-2" />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-info w-52">Login</button>

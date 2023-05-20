@@ -57,14 +57,14 @@ const Header = () => {
                 user ?
                     <>
                         <div className="navbar-end">
-                            <Link>
+                            <>
                                 <div className="avatar mr-4 hidden md:block">
                                     <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                         <img src={user.photoURL} title={`${user?.displayName}`} />
                                     </div>
                                 </div>
-                            </Link>
-                            <Link className='button p-2 text-white rounded w-32 text-center hover:bg-warning' onClick={logOut}>Logout</Link>
+                            </>
+                            <Link className='button p-2 text-white rounded w-32 text-center hover:bg-warning ' onClick={logOut}>Logout</Link>
                         </div>
                     </>
                     :

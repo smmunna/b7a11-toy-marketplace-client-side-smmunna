@@ -82,7 +82,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder=" Enter your password" required className="py-2" />
+                                <input type="password" name='password' placeholder=" Enter your password" required className="py-2" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
