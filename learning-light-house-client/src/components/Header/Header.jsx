@@ -17,11 +17,23 @@ const Header = () => {
                     <li><ActiveLink to="/mytoys">My Toys</ActiveLink></li>
                 </>
                 :
-                <>
-                    
-                </>
+                <></>
         }
         <li><ActiveLink to="/blogs">Blogs</ActiveLink></li>
+        {
+            user ?
+                <>
+                    <>
+                        <div className="avatar mr-4 md:hidden">
+                            <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src={user.photoURL} title={`${user?.displayName}`} />
+                            </div>
+                        </div>
+                    </>
+                </>
+                :
+                <></>
+        }
     </>
     return (
         <div className="navbar py-3 lg:px-20">
@@ -45,13 +57,13 @@ const Header = () => {
                 user ?
                     <>
                         <div className="navbar-end">
-                            <>
-                                <div className="avatar mr-4 hidden lg:flex items-center  md:block">
+                            <Link>
+                                <div className="avatar mr-4 hidden md:block">
                                     <div className=" w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                         <img src={user.photoURL} title={`${user?.displayName}`} />
                                     </div>
                                 </div>
-                            </>
+                            </Link>
                             <Link className='button p-2 text-white rounded w-32 text-center hover:bg-warning' onClick={logOut}>Logout</Link>
                         </div>
                     </>

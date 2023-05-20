@@ -24,10 +24,10 @@ const Footer = () => {
                     <a className="link link-hover">Vision</a>
                 </div>
                 <div>
-                    <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <span className="footer-title">Contact Info</span>
+                    <a href='tel:+8801611765966'>+8801611-765966</a>
+                    <p>minhazulabedinmunna@gmail.com</p>
+                    <p>Uttara, Sector-10, Dhaka 1230</p>
                 </div>
             </footer>
             <footer className="footer px-10 pt-5 border-t  text-black border-base-300">
